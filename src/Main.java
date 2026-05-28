@@ -57,6 +57,10 @@ public class Main {
                 }
             }
         }
+        System.out.println("\n-- Absence Summary --");
+        for (Student s : students) {
+            s.displayInfo(); // overridden displayInfo shows absences
+        }
 
     }
 }

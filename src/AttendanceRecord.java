@@ -20,6 +20,14 @@ public class AttendanceRecord {
     public String getStatus() {
         return status;
     }
+    public void setStatus(String status) {
+        if (status.equalsIgnoreCase("Present") || status.equalsIgnoreCase("Absent")) {
+            this.status = status;
+        } else {
+            System.out.println("Invalid status. Use Present or Absent. Defaulting to Absent.");
+            this.status = "Absent";
+        }
+    }
 
 }
 

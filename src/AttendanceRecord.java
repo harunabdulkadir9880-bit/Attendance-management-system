@@ -28,6 +28,13 @@ public class AttendanceRecord {
             this.status = "Absent";
         }
     }
+    public void display() {
+        System.out.println(date + " | " + studentId + " | " + status);
+    }
+
+    public void display(String studentName) {
+        System.out.println(date + " | " + studentName + " (" + studentId + ") | " + status);
+    }
 
 }
 

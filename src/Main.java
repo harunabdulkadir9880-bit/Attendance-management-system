@@ -13,5 +13,16 @@ public class Main {
         System.out.print("Subject: "); String tSubject = scanner.nextLine();
         Teacher teacher = new Teacher(tName, tAge, tSubject);
 
+        System.out.print("\nHow many students to enroll? ");
+        int count = Integer.parseInt(scanner.nextLine());
+
+        for (int i = 1; i <= count; i++) {
+            System.out.println("\nStudent " + i + ":");
+            System.out.print("Name: ");       String sName = scanner.nextLine();
+            System.out.print("Age: ");        int sAge     = Integer.parseInt(scanner.nextLine());
+            System.out.print("Student ID: "); String sId   = scanner.nextLine();
+            students.add(new Student(sName, sAge, sId));
+        }
+
     }
 }

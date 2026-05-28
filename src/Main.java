@@ -23,6 +23,18 @@ public class Main {
             System.out.print("Student ID: "); String sId   = scanner.nextLine();
             students.add(new Student(sName, sAge, sId));
         }
+        System.out.print("\nEnter date for attendance (e.g. 2025-01-20): ");
+        String date = scanner.nextLine();
+
+        for (Student s : students) {
+            System.out.print("Mark " + s.getName() + " as Present or Absent: ");
+            String status = scanner.nextLine();
+            AttendanceRecord record = new AttendanceRecord(s.getStudentId(), date, status);
+            records.add(record);
+            if (record.getStatus().equalsIgnoreCase("Absent")) {
+                s.addAbsence();
+            }
+        }
 
     }
 }

@@ -35,6 +35,28 @@ public class Main {
                 s.addAbsence();
             }
         }
+        System.out.println("\n-- Class Info --");
+        Person[] people = new Person[students.size() + 1];
+        people[0] = teacher;
+        for (int i = 0; i < students.size(); i++) {
+            people[i + 1] = students.get(i);
+        }
+
+        for (Person p : people) {
+            p.displayInfo();                   // runtime polymorphism: runs the right version
+            System.out.println("  Role: " + p.getRole());
+        }
+
+        // Show attendance records using overloaded display()
+        System.out.println("\n-- Attendance for " + date + " --");
+        for (AttendanceRecord r : records) {
+            // find the student name to use the overloaded version
+            for (Student s : students) {
+                if (s.getStudentId().equals(r.getStudentId())) {
+                    r.display(s.getName()); // overload with name
+                }
+            }
+        }
 
     }
 }

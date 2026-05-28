@@ -8,4 +8,18 @@ public class AttendanceRecord {
         this.date = date;
         setStatus(status);
     }
+
+    public String getStudentId() {
+        return studentId;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
 }
+

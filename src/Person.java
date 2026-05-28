@@ -15,5 +15,14 @@ public abstract class Person {
         if (age > 0) this.age = age;
         else System.out.println("Age must be positive.");
     }
+    public void displayInfo() {
+        System.out.println(name + " | Age: " + age);
+    }
+
+    public void displayInfo(String label) {
+        System.out.println(label + ": " + name + " | Age: " + age);
+    }
+
+    public abstract String getRole();
 
 }

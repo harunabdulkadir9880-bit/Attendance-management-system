@@ -2,7 +2,7 @@ public class Teacher extends Person {
     private String subject;
     private String employeeid;
 
-    public Teacher(String name, int age, String subject, String employeeid) {
+    public Teacher(String name, int age, String subject) {
         super(name, age);
         this.subject = subject;
     }

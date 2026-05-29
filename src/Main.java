@@ -11,7 +11,7 @@ public class Main {
         System.out.print("Name: ");    String tName    = scanner.nextLine();
         System.out.print("Age: ");     int tAge        = Integer.parseInt(scanner.nextLine());
         System.out.print("Subject: "); String tSubject = scanner.nextLine();
-        Teacher teacher = new Teacher(tName, tAge, tSubject);
+        Teacher teacher = new Teacher(tName, tAge, tSubject,);
 
         System.out.print("\nHow many students to enroll? ");
         int count = Integer.parseInt(scanner.nextLine());
